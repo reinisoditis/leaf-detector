@@ -23,7 +23,7 @@ classification_model = torch.load('./resnet50-model.pth')
 classification_model.eval() 
 
 transform = transforms.Compose([
-    transforms.Resize((128, 128)),
+    transforms.Resize((256, 256)),
     transforms.ToTensor(),
 ])
 
@@ -43,7 +43,7 @@ def predict_image(image, model):
 
     return formatted_percentages
 
-yolo_model = YOLO('./yolov8n-seg.pt')
+yolo_model = YOLO('./yolov9c-seg.pt')
 image_path = './test_images/DJI_0383.JPG'
 
 
