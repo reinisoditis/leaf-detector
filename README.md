@@ -39,10 +39,18 @@
        - for script help (to see info about arguments) use - `python .\pipeline-structure-no-predictions-on-images.py --help`
 
 -----
+### Model pipeline result display on heatmap:
+- Usage:
+
+  - if needed replace "image_folder", "leaf_condition_json", "map_output" values
+  - to run script - `python leaf_classification_results_on_heat_map.py`
+  - .html map will be available in provided "map_output"
+
+-----
 
 ### For Developers
 
-#### YOLO models predictions:
+#### models predictions, results:
     
     - at the moment YOLO model prediction arguments can be changed only in code (max detections, confidence treshold, iou ..)
     - model pipeline results will be saved in .json file, in provided output_dir
@@ -61,3 +69,10 @@
             }
         }
     }
+
+#### Heat man modifications:
+
+  - each classification/condition has separate heat colors depending on classified leaf class (can be changed in code)
+  - each classification/condition has separate heat radius size depending on classified leaf class (can be customized in code)
+  - different tiles can be used, previews and usage - https://leaflet-extras.github.io/leaflet-providers/preview/
+  - when creating map (in code) can define max_zoom, for option to zoom closer (depends on map tile specification)
