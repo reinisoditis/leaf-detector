@@ -5,8 +5,8 @@
 ## Models:
     
     - Object detection:
-        - yolov8x-detect.pt --imgsz=640
         - yolov8n-detect-1280.pt --imgsz=1280 (smaller model with bigger img input size, faster than 8x)
+        - yolov8n-detect-1280-tuned.pt --imgsz=1280 (with tuned hyperparameters v2)
 
     - Segmentation:
         - yolov8n-seg.pt
