@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blackcurrant Map Viewer & Data Trends</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <button id="toggleSidebar"><</button>
+            <h2>Options</h2>
+            <div class="radio-group">
+                <input type="radio" id="singleMap" name="displayMode" value="single" checked>
+                <label for="singleMap">Single Map</label><br>
+                <input type="radio" id="compareMaps" name="displayMode" value="compare">
+                <label for="compareMaps">Compare Maps</label><br>
+                <input type="radio" id="viewTrends" name="displayMode" value="trends">
+                <label for="viewTrends">View Trends</label>
+            </div>
+
+            <div id="singleMapOptions">
+                <select id="singleDateSelect">
+                    {% for date in map_files.keys()|sort %}
+                    <option value="{{ date }}">{{ date }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div id="compareMapOptions" class="hidden">
+                <select id="compareDatesSelect" multiple>
+                    {% for date in map_files.keys()|sort %}
+                    <option value="{{ date }}">{{ date }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="singleMapView">
+            <div class="map-title"></div>
+            <div class="map-container">
+                <iframe id="mapFrame"></iframe>
+            </div>
+        </div>
+
+        <div id="compareMapView" class="hidden">
+            <div class="map-grid"></div>
+        </div>
+
+        <div id="trendsView" class="hidden">
+            <div id="trendChart"></div>
+        </div>
+    </div>
+
+    <script>
+        const state = {
+            currentMode: 'single'
+        };
+
+        // Sidebar toggle
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.getElementById('toggleSidebar');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('shrink');
+        });
+
+        // Handle display mode changes
+        document.querySelectorAll('input[name="displayMode"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const mode = e.target.value;
+                state.currentMode = mode;
+
+                document.getElementById('singleMapOptions').classList.toggle('hidden', mode !== 'single');
+                document.getElementById('compareMapOptions').classList.toggle('hidden', mode !== 'compare');
+                document.getElementById('singleMapView').classList.toggle('hidden', mode !== 'single');
+                document.getElementById('compareMapView').classList.toggle('hidden', mode !== 'compare');
+                document.getElementById('trendsView').classList.toggle('hidden', mode !== 'trends');
+
+                if (mode === 'single') {
+                    loadSingleMap();
+                } else if (mode === 'compare') {
+                    loadCompareMaps();
+                } else if (mode === 'trends') {
+                    loadTrends();
+                }
+            });
+        });
+
+        function createStatsHTML(statistics) {
+            if (!statistics) return '';
+
+            return `
+                <div style="margin-top: 10px; padding: 5px; background-color: #f5f5f5; text-align: center;">
+                    Healthy: ${statistics.healthy}% |
+                    Mineral deficiency: ${statistics.mineral}% |
+                    Disease: ${statistics.disease}%
+                </div>
+            `;
+        }
+
+        async function loadSingleMap() {
+            const date = document.getElementById('singleDateSelect').value;
+            const response = await fetch(`/get_map/${date}`);
+            const data = await response.json();
+
+            document.querySelector('#singleMapView .map-title').innerHTML = `Map for ${date}`;
+            const container = document.querySelector('#singleMapView .map-container');
+            container.innerHTML = `
+            ${createStatsHTML(data.statistics)}
+                <iframe id="mapFrame" srcdoc="${data.html.replace(/"/g, '&quot;')}"
+                        style="width:100%; height:calc(100% - 40px); border:none;"></iframe>
+            `;
+        }
+
+        async function loadCompareMaps() {
+            const select = document.getElementById('compareDatesSelect');
+            const selectedDates = Array.from(select.selectedOptions).map(option => option.value);
+
+            const mapGrid = document.querySelector('#compareMapView .map-grid');
+            mapGrid.innerHTML = '';
+
+            for (const date of selectedDates) {
+                const response = await fetch(`/get_map/${date}`);
+                const data = await response.json();
+
+                const mapContainer = document.createElement('div');
+                mapContainer.className = 'map-container';
+                mapContainer.style.height = '550px';
+
+                mapContainer.innerHTML = `
+                    <div class="map-title">Map for ${date}</div>
+                    ${createStatsHTML(data.statistics)}
+                    <iframe srcdoc="${data.html.replace(/"/g, '&quot;')}"
+                            style="width:100%; height:calc(100% - 40px); border:none;"></iframe>
+                `;
+                mapGrid.appendChild(mapContainer);
+            }
+        }
+
+        async function loadTrends() {
+            const response = await fetch('/get_trends');
+            const json = await response.json();
+
+            const traces = {};
+            json.data.forEach(record => {
+                if (!traces[record.Condition]) {
+                    traces[record.Condition] = {
+                        x: [],
+                        y: [],
+                        name: record.Condition,
+                        type: 'scatter',
+                        mode: 'lines+markers',
+                        line: {
+                            color: getConditionColor(record.Condition) // Use color based on condition
+                        }
+                    };
+                }
+                traces[record.Condition].x.push(record.Date);
+                traces[record.Condition].y.push(record.Percentage);
+            });
+
+            const layout = {
+                title: 'Condition Trends Over Time',
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'Percentage (%)' }
+            };
+
+            Plotly.newPlot('trendChart', Object.values(traces), layout);
+        }
+
+        function getConditionColor(condition) {
+            const colorMap = {
+                'healthy': 'green',
+                'mineral': 'orange',
+                'disease': 'red'
+            };
+            return colorMap[condition] || 'blue'; // Default to blue for unknown conditions
+        }
+
+        // Initialize
+        loadSingleMap();
+
+        // Add event listeners
+        document.getElementById('singleDateSelect').addEventListener('change', loadSingleMap);
+        document.getElementById('compareDatesSelect').addEventListener('change', loadCompareMaps);
+    </script>
+</body>
+</html>
