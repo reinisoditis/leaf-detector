@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: blackcurrant_browser_app
+    ports:
+      - "8000:8000" # Maps container port 8000 to local port 8000
+    volumes:
+      - .:/app # Mount the local directory into the container for live code updates
