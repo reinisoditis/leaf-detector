@@ -47,6 +47,10 @@
   - .html map will be available in provided "map_output"
 
 -----
+### Blackcurrant data mapping for browsing
+- Separate documentation available [here](src/blackcurrant_data_mapping_browser/README.md)
+
+-----
 
 ### For Developers
 
