@@ -1,0 +1,544 @@
+{
+    "DJI_0001.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 582,
+            "disease": 13
+        }
+    },
+    "DJI_0011.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 538,
+            "disease": 8
+        }
+    },
+    "DJI_0021.JPG": {
+        "conditions": [
+            "disease",
+            "healthy"
+        ],
+        "counts": {
+            "healthy": 470,
+            "disease": 8
+        }
+    },
+    "DJI_0031.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 381,
+            "disease": 7
+        }
+    },
+    "DJI_0041.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 275,
+            "disease": 18
+        }
+    },
+    "DJI_0051.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 329,
+            "disease": 7
+        }
+    },
+    "DJI_0061.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 301,
+            "disease": 12
+        }
+    },
+    "DJI_0071.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 306,
+            "disease": 10
+        }
+    },
+    "DJI_0081.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 144,
+            "disease": 15
+        }
+    },
+    "DJI_0091.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 287,
+            "disease": 13
+        }
+    },
+    "DJI_0101.JPG": {
+        "conditions": [
+            "disease",
+            "healthy"
+        ],
+        "counts": {
+            "healthy": 279,
+            "disease": 18
+        }
+    },
+    "DJI_0111.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 282,
+            "disease": 1
+        }
+    },
+    "DJI_0121.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 181,
+            "disease": 7
+        }
+    },
+    "DJI_0131.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 121,
+            "disease": 9
+        }
+    },
+    "DJI_0141.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 117,
+            "disease": 6
+        }
+    },
+    "DJI_0151.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 192,
+            "disease": 10
+        }
+    },
+    "DJI_0161.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 175,
+            "disease": 7
+        }
+    },
+    "DJI_0171.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 97,
+            "disease": 4
+        }
+    },
+    "DJI_0181.JPG": {
+        "conditions": [
+            "healthy",
+            "disease",
+            "mineral"
+        ],
+        "counts": {
+            "healthy": 243,
+            "mineral": 1,
+            "disease": 17
+        }
+    },
+    "DJI_0191.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 397,
+            "disease": 11
+        }
+    },
+    "DJI_0664.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 195,
+            "disease": 5
+        }
+    },
+    "DJI_0674.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 127,
+            "disease": 7
+        }
+    },
+    "DJI_0684.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 372,
+            "disease": 2
+        }
+    },
+    "DJI_0694.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 452,
+            "disease": 4
+        }
+    },
+    "DJI_0704.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 436,
+            "disease": 4
+        }
+    },
+    "DJI_0714.JPG": {
+        "conditions": [
+            "disease",
+            "healthy",
+            "mineral"
+        ],
+        "counts": {
+            "healthy": 616,
+            "mineral": 1,
+            "disease": 10
+        }
+    },
+    "DJI_0724.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 450,
+            "disease": 5
+        }
+    },
+    "DJI_0734.JPG": {
+        "conditions": [
+            "healthy"
+        ],
+        "counts": {
+            "healthy": 350
+        }
+    },
+    "DJI_0744.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 439,
+            "disease": 2
+        }
+    },
+    "DJI_0754.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 310,
+            "disease": 2
+        }
+    },
+    "DJI_0764.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 274,
+            "disease": 3
+        }
+    },
+    "DJI_0774.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 379,
+            "disease": 3
+        }
+    },
+    "DJI_0784.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 242,
+            "disease": 3
+        }
+    },
+    "DJI_0794.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 254,
+            "disease": 4
+        }
+    },
+    "DJI_0804.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 439,
+            "disease": 9
+        }
+    },
+    "DJI_0814.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 443,
+            "disease": 6
+        }
+    },
+    "DJI_0824.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 252,
+            "disease": 6
+        }
+    },
+    "DJI_0834.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 360,
+            "disease": 9
+        }
+    },
+    "DJI_0844.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 382,
+            "disease": 6
+        }
+    },
+    "DJI_0854.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 427,
+            "disease": 5
+        }
+    },
+    "DJI_0864.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 472,
+            "disease": 8
+        }
+    },
+    "DJI_0874.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 329,
+            "disease": 5
+        }
+    },
+    "DJI_0884.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 227,
+            "disease": 4
+        }
+    },
+    "DJI_0894.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 572,
+            "disease": 11
+        }
+    },
+    "DJI_0904.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 568,
+            "disease": 6
+        }
+    },
+    "DJI_0914.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 526,
+            "disease": 17
+        }
+    },
+    "DJI_0924.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 290,
+            "disease": 2
+        }
+    },
+    "DJI_0934.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 157,
+            "disease": 5
+        }
+    },
+    "DJI_0944.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 233,
+            "disease": 9
+        }
+    },
+    "DJI_0954.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 164,
+            "disease": 2
+        }
+    },
+    "DJI_0964.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 225,
+            "disease": 11
+        }
+    },
+    "DJI_0974.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 158,
+            "disease": 9
+        }
+    },
+    "DJI_0984.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 400,
+            "disease": 11
+        }
+    },
+    "DJI_0994.JPG": {
+        "conditions": [
+            "healthy",
+            "disease"
+        ],
+        "counts": {
+            "healthy": 595,
+            "disease": 12
+        }
+    }
+}

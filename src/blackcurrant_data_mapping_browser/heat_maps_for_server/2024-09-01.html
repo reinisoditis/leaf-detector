@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4288293cb21b5636da2b93415b8dfa86 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4288293cb21b5636da2b93415b8dfa86" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4288293cb21b5636da2b93415b8dfa86 = L.map(
+                "map_4288293cb21b5636da2b93415b8dfa86",
+                {
+                    center: [56.732801333333335, 24.403948611111108],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 18,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3692148cc17aa3a7c6000c53bdca7d82 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 22, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_3692148cc17aa3a7c6000c53bdca7d82.addTo(map_4288293cb21b5636da2b93415b8dfa86);
+        
+    
+            var feature_group_00f76ad074fa284704bcdf2a62520896 = L.featureGroup(
+                {}
+            );
+        
+    
+            var heat_map_a4a215e15d57a4f297118cabc47590af = L.heatLayer(
+                [[56.732801333333335, 24.403948611111108, 0.9523809523809523], [56.73287127777778, 24.403911333333333, 0.9471947194719472], [56.732940194444446, 24.40387433333333, 0.9594017094017094], [56.73326161111111, 24.40373025, 0.9828178694158075], [56.73319361111111, 24.403766027777777, 0.9501246882793017], [56.73312366666667, 24.403802388888888, 0.9592592592592593], [56.73304877777778, 24.403844166666666, 0.9457013574660633], [56.732977500000004, 24.403882277777775, 0.9629629629629629], [56.73290869444445, 24.403917555555555, 0.9453376205787781], [56.73283969444444, 24.403954444444445, 0.9586776859504132], [56.73277438888889, 24.403989805555554, 0.971830985915493], [56.73270547222222, 24.404027305555555, 0.9485294117647058], [56.73264125, 24.40406161111111, 1.0], [56.73269119444445, 24.404059583333332, 0.9393939393939394], [56.73275988888889, 24.40402272222222, 0.9213483146067416], [56.732824694444446, 24.403989777777777, 0.9405940594059405], [56.73289530555556, 24.403950583333334, 0.8888888888888888], [56.732958555555555, 24.403916916666667, 0.9488817891373802], [56.733033194444445, 24.403876416666666, 0.9590643274853801], [56.73310447222222, 24.403839805555553, 0.9307692307692308], [56.733173972222225, 24.403802777777777, 0.9233870967741935], [56.73324252777778, 24.403765888888888, 0.9565217391304348], [56.733311416666666, 24.403728944444442, 0.956989247311828], [56.73326891666667, 24.403780055555554, 0.9563492063492064], [56.73320155555556, 24.40381383333333, 0.9404388714733543], [56.73313188888889, 24.40385186111111, 0.9304347826086956], [56.73306263888889, 24.40388938888889, 0.949748743718593], [56.73298855555556, 24.403927638888888, 0.9298245614035088], [56.732923944444444, 24.403963777777776, 0.9806201550387597], [56.732850444444445, 24.404000777777778, 0.9111111111111111], [56.73277822222222, 24.404040888888886, 0.9819819819819819], [56.73270827777778, 24.40407886111111, 0.9241706161137441], [56.732648222222224, 24.40413994444444, 0.9444444444444444], [56.732718500000004, 24.404098305555554, 0.8778625954198473], [56.73278852777778, 24.40406008333333, 0.9473684210526315], [56.732857805555554, 24.4040245, 0.9401709401709402], [56.73293272222222, 24.40398286111111, 0.9575757575757575], [56.733001305555554, 24.403947777777777, 0.9306569343065694], [56.73307061111111, 24.403909777777777, 0.9446640316205533], [56.733141583333335, 24.40387225, 0.9625], [56.73321275, 24.403834277777776, 0.8983050847457628], [56.73325997222222, 24.403809555555554, 0.9604221635883905], [56.733331, 24.403802805555554, 0.9428571428571428], [56.733258944444444, 24.403835555555553, 0.9519230769230769], [56.73318972222222, 24.40387225, 0.9295154185022027], [56.73311811111111, 24.403911833333332, 0.8712121212121212], [56.73304569444445, 24.40395072222222, 0.9487179487179487], [56.7329735, 24.403989, 0.9563758389261745], [56.732904250000004, 24.40402575, 0.9548022598870056], [56.73283516666667, 24.404062194444442, 0.9626168224299065], [56.73276491666667, 24.404101277777777, 0.9797297297297297], [56.732695972222224, 24.404137055555555, 0.953125], [56.73264502777778, 24.40402897222222, 0.9259259259259259], [56.73271469444445, 24.403994805555556, 0.9351851851851852], [56.732784361111115, 24.403957166666665, 0.9015151515151515]],
+                {"blur": 4, "gradient": {"0.1": "rgb(229, 255, 229)", "0.2": "rgb(204, 255, 204)", "0.4": "rgb(199, 255, 199)", "0.6": "rgb(118, 255, 118)", "0.8": "rgb(46, 204, 113)", "1.0": "rgb(0, 153, 76)"}, "maxOpacity": 0.8, "maxZoom": 18, "minOpacity": 0.3, "radius": 20}
+            );
+        
+    
+            heat_map_a4a215e15d57a4f297118cabc47590af.addTo(feature_group_00f76ad074fa284704bcdf2a62520896);
+        
+    
+            feature_group_00f76ad074fa284704bcdf2a62520896.addTo(map_4288293cb21b5636da2b93415b8dfa86);
+        
+    
+            var feature_group_e1d5e1e17f70afb0b264630be78505b1 = L.featureGroup(
+                {}
+            );
+        
+    
+            var heat_map_c49a61ce66d2954dc08f3de3c1ddd1d8 = L.heatLayer(
+                [[56.732801333333335, 24.403948611111108, 0.047619047619047616], [56.73287127777778, 24.403911333333333, 0.052805280528052806], [56.732940194444446, 24.40387433333333, 0.0405982905982906], [56.73326161111111, 24.40373025, 0.01718213058419244], [56.73319361111111, 24.403766027777777, 0.04987531172069826], [56.73312366666667, 24.403802388888888, 0.040740740740740744], [56.73304877777778, 24.403844166666666, 0.05429864253393665], [56.732977500000004, 24.403882277777775, 0.037037037037037035], [56.73290869444445, 24.403917555555555, 0.05466237942122187], [56.73283969444444, 24.403954444444445, 0.04132231404958678], [56.73277438888889, 24.403989805555554, 0.028169014084507043], [56.73270547222222, 24.404027305555555, 0.051470588235294115], [56.73269119444445, 24.404059583333332, 0.06060606060606061], [56.73275988888889, 24.40402272222222, 0.07865168539325842], [56.732824694444446, 24.403989777777777, 0.0594059405940594], [56.73289530555556, 24.403950583333334, 0.1111111111111111], [56.732958555555555, 24.403916916666667, 0.051118210862619806], [56.733033194444445, 24.403876416666666, 0.04093567251461988], [56.73310447222222, 24.403839805555553, 0.06923076923076923], [56.733173972222225, 24.403802777777777, 0.07661290322580645], [56.73324252777778, 24.403765888888888, 0.043478260869565216], [56.733311416666666, 24.403728944444442, 0.043010752688172046], [56.73326891666667, 24.403780055555554, 0.04365079365079365], [56.73320155555556, 24.40381383333333, 0.05956112852664577], [56.73313188888889, 24.40385186111111, 0.06956521739130435], [56.73306263888889, 24.40388938888889, 0.05025125628140704], [56.73298855555556, 24.403927638888888, 0.07017543859649122], [56.732923944444444, 24.403963777777776, 0.015503875968992248], [56.732850444444445, 24.404000777777778, 0.08888888888888889], [56.73277822222222, 24.404040888888886, 0.018018018018018018], [56.73270827777778, 24.40407886111111, 0.07109004739336493], [56.732648222222224, 24.40413994444444, 0.05555555555555555], [56.732718500000004, 24.404098305555554, 0.12213740458015267], [56.73278852777778, 24.40406008333333, 0.05263157894736842], [56.732857805555554, 24.4040245, 0.05982905982905983], [56.73293272222222, 24.40398286111111, 0.04242424242424243], [56.733001305555554, 24.403947777777777, 0.06934306569343066], [56.73307061111111, 24.403909777777777, 0.05533596837944664], [56.733141583333335, 24.40387225, 0.0375], [56.73321275, 24.403834277777776, 0.1016949152542373], [56.73325997222222, 24.403809555555554, 0.0395778364116095], [56.733331, 24.403802805555554, 0.053061224489795916], [56.733258944444444, 24.403835555555553, 0.04807692307692308], [56.73318972222222, 24.40387225, 0.07048458149779736], [56.73311811111111, 24.403911833333332, 0.12878787878787878], [56.73304569444445, 24.40395072222222, 0.05128205128205128], [56.7329735, 24.403989, 0.0436241610738255], [56.732904250000004, 24.40402575, 0.04519774011299435], [56.73283516666667, 24.404062194444442, 0.037383177570093455], [56.73276491666667, 24.404101277777777, 0.02027027027027027], [56.732695972222224, 24.404137055555555, 0.046875], [56.73264502777778, 24.40402897222222, 0.07407407407407407], [56.73271469444445, 24.403994805555556, 0.06481481481481481], [56.732784361111115, 24.403957166666665, 0.09848484848484848]],
+                {"blur": 4, "gradient": {"0.1": "rgb(255, 229, 229)", "0.2": "rgb(255, 204, 204)", "0.4": "rgb(255, 199, 199)", "0.6": "rgb(255, 118, 118)", "0.8": "rgb(231, 76, 60)", "1.0": "rgb(153, 0, 0)"}, "maxOpacity": 0.8, "maxZoom": 18, "minOpacity": 0.3, "radius": 9}
+            );
+        
+    
+            heat_map_c49a61ce66d2954dc08f3de3c1ddd1d8.addTo(feature_group_e1d5e1e17f70afb0b264630be78505b1);
+        
+    
+            feature_group_e1d5e1e17f70afb0b264630be78505b1.addTo(map_4288293cb21b5636da2b93415b8dfa86);
+        
+    
+            var feature_group_cda2c6ce42966d3540835206b08a5346 = L.featureGroup(
+                {}
+            );
+        
+    
+            var heat_map_999595475f1cc0ff727659ca642a2cda = L.heatLayer(
+                [[56.732923944444444, 24.403963777777776, 0.003875968992248062], [56.73270827777778, 24.40407886111111, 0.004739336492890996], [56.733331, 24.403802805555554, 0.004081632653061225]],
+                {"blur": 4, "gradient": {"0.1": "rgb(255, 250, 229)", "0.2": "rgb(255, 245, 204)", "0.4": "rgb(255, 242, 199)", "0.6": "rgb(255, 230, 118)", "0.8": "rgb(241, 196, 15)", "1.0": "rgb(204, 153, 0)"}, "maxOpacity": 0.8, "maxZoom": 18, "minOpacity": 0.3, "radius": 5}
+            );
+        
+    
+            heat_map_999595475f1cc0ff727659ca642a2cda.addTo(feature_group_cda2c6ce42966d3540835206b08a5346);
+        
+    
+            feature_group_cda2c6ce42966d3540835206b08a5346.addTo(map_4288293cb21b5636da2b93415b8dfa86);
+        
+    
+            var feature_group_1bbfd5f2460ee93996b0b829849f9329 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_b2618815743679cc436a19d3c192ddb7 = L.circle(
+                [56.732801333333335, 24.403948611111108],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_ce1f7aea27ceff9370bf62914d0f6937 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_e9010ba4662f1d80ce39015a1515199a = $(`<div id="html_e9010ba4662f1d80ce39015a1515199a" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0001.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0001.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_ce1f7aea27ceff9370bf62914d0f6937.setContent(html_e9010ba4662f1d80ce39015a1515199a);
+            
+        
+
+        circle_b2618815743679cc436a19d3c192ddb7.bindPopup(popup_ce1f7aea27ceff9370bf62914d0f6937)
+        ;
+
+        
+    
+    
+            circle_b2618815743679cc436a19d3c192ddb7.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.24%</li><li style="margin: 0; padding: 0;">Disease: 4.76%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4a3d70b37d635aeb579da737d607a821 = L.circle(
+                [56.73287127777778, 24.403911333333333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_109d7609adbdc6842071b7eaf1bf2ba3 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_53184e3859799f0f328e8358fb1da073 = $(`<div id="html_53184e3859799f0f328e8358fb1da073" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0011.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0011.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_109d7609adbdc6842071b7eaf1bf2ba3.setContent(html_53184e3859799f0f328e8358fb1da073);
+            
+        
+
+        circle_4a3d70b37d635aeb579da737d607a821.bindPopup(popup_109d7609adbdc6842071b7eaf1bf2ba3)
+        ;
+
+        
+    
+    
+            circle_4a3d70b37d635aeb579da737d607a821.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.72%</li><li style="margin: 0; padding: 0;">Disease: 5.28%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8f320692d271e4b0db7b11d4fecb6feb = L.circle(
+                [56.732940194444446, 24.40387433333333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_81d1471de9a0f8f439ebb2f27e2429ed = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_5ff78041ebbba6fa8435d00067afbc55 = $(`<div id="html_5ff78041ebbba6fa8435d00067afbc55" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0021.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0021.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_81d1471de9a0f8f439ebb2f27e2429ed.setContent(html_5ff78041ebbba6fa8435d00067afbc55);
+            
+        
+
+        circle_8f320692d271e4b0db7b11d4fecb6feb.bindPopup(popup_81d1471de9a0f8f439ebb2f27e2429ed)
+        ;
+
+        
+    
+    
+            circle_8f320692d271e4b0db7b11d4fecb6feb.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.94%</li><li style="margin: 0; padding: 0;">Disease: 4.06%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d0d0a401da34a4745e87afcc1d92c26b = L.circle(
+                [56.73326161111111, 24.40373025],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_a2165276d011349b8a6859447431f54d = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_2ec37c079e5e63051546a1ad7389d446 = $(`<div id="html_2ec37c079e5e63051546a1ad7389d446" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0488.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0488.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_a2165276d011349b8a6859447431f54d.setContent(html_2ec37c079e5e63051546a1ad7389d446);
+            
+        
+
+        circle_d0d0a401da34a4745e87afcc1d92c26b.bindPopup(popup_a2165276d011349b8a6859447431f54d)
+        ;
+
+        
+    
+    
+            circle_d0d0a401da34a4745e87afcc1d92c26b.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 98.28%</li><li style="margin: 0; padding: 0;">Disease: 1.72%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8d2d177c3d7079f9ae77c4c6095123b0 = L.circle(
+                [56.73319361111111, 24.403766027777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_e7f97fc1bc28182bf6dcb63f419b161a = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_e524615cbac00188d57d1ed6130c52b8 = $(`<div id="html_e524615cbac00188d57d1ed6130c52b8" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0498.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0498.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_e7f97fc1bc28182bf6dcb63f419b161a.setContent(html_e524615cbac00188d57d1ed6130c52b8);
+            
+        
+
+        circle_8d2d177c3d7079f9ae77c4c6095123b0.bindPopup(popup_e7f97fc1bc28182bf6dcb63f419b161a)
+        ;
+
+        
+    
+    
+            circle_8d2d177c3d7079f9ae77c4c6095123b0.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.01%</li><li style="margin: 0; padding: 0;">Disease: 4.99%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9d12d1e435fc344455f019ae13910121 = L.circle(
+                [56.73312366666667, 24.403802388888888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_eb3a39c7b76ae73e0e3d9804e899d64f = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_5eb2ea45fc3a047f2550bf02b0894b74 = $(`<div id="html_5eb2ea45fc3a047f2550bf02b0894b74" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0508.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0508.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_eb3a39c7b76ae73e0e3d9804e899d64f.setContent(html_5eb2ea45fc3a047f2550bf02b0894b74);
+            
+        
+
+        circle_9d12d1e435fc344455f019ae13910121.bindPopup(popup_eb3a39c7b76ae73e0e3d9804e899d64f)
+        ;
+
+        
+    
+    
+            circle_9d12d1e435fc344455f019ae13910121.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.93%</li><li style="margin: 0; padding: 0;">Disease: 4.07%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9bc9a2bba0f2f9e15b9d37345ad33338 = L.circle(
+                [56.73304877777778, 24.403844166666666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_5cae8e93aedb0c089b77ae37efe769ee = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_595f60daed853cf8e497c8805fddafde = $(`<div id="html_595f60daed853cf8e497c8805fddafde" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0518.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0518.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_5cae8e93aedb0c089b77ae37efe769ee.setContent(html_595f60daed853cf8e497c8805fddafde);
+            
+        
+
+        circle_9bc9a2bba0f2f9e15b9d37345ad33338.bindPopup(popup_5cae8e93aedb0c089b77ae37efe769ee)
+        ;
+
+        
+    
+    
+            circle_9bc9a2bba0f2f9e15b9d37345ad33338.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.57%</li><li style="margin: 0; padding: 0;">Disease: 5.43%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_06570afc616a9dd77cc223f3a6a7da34 = L.circle(
+                [56.732977500000004, 24.403882277777775],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_f780f281b64fc7c2bb87a999ce2c822f = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_66344ca05092a07a783c970dae87cd51 = $(`<div id="html_66344ca05092a07a783c970dae87cd51" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0528.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0528.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_f780f281b64fc7c2bb87a999ce2c822f.setContent(html_66344ca05092a07a783c970dae87cd51);
+            
+        
+
+        circle_06570afc616a9dd77cc223f3a6a7da34.bindPopup(popup_f780f281b64fc7c2bb87a999ce2c822f)
+        ;
+
+        
+    
+    
+            circle_06570afc616a9dd77cc223f3a6a7da34.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 96.30%</li><li style="margin: 0; padding: 0;">Disease: 3.70%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1fa4f1083216a67e49c011d33ff39779 = L.circle(
+                [56.73290869444445, 24.403917555555555],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_f5ca97e4b6900397705e45e5b2b85856 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_2013c13ccabf2feecb1c414d89e263ad = $(`<div id="html_2013c13ccabf2feecb1c414d89e263ad" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0538.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0538.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_f5ca97e4b6900397705e45e5b2b85856.setContent(html_2013c13ccabf2feecb1c414d89e263ad);
+            
+        
+
+        circle_1fa4f1083216a67e49c011d33ff39779.bindPopup(popup_f5ca97e4b6900397705e45e5b2b85856)
+        ;
+
+        
+    
+    
+            circle_1fa4f1083216a67e49c011d33ff39779.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.53%</li><li style="margin: 0; padding: 0;">Disease: 5.47%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_683dad1bdd642aa111bbf7de6db7e70c = L.circle(
+                [56.73283969444444, 24.403954444444445],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_913f7fb6f570e015d93dec45b3d68d92 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_c20d71e51c9c41e3960c8d04fda88a0e = $(`<div id="html_c20d71e51c9c41e3960c8d04fda88a0e" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0548.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0548.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_913f7fb6f570e015d93dec45b3d68d92.setContent(html_c20d71e51c9c41e3960c8d04fda88a0e);
+            
+        
+
+        circle_683dad1bdd642aa111bbf7de6db7e70c.bindPopup(popup_913f7fb6f570e015d93dec45b3d68d92)
+        ;
+
+        
+    
+    
+            circle_683dad1bdd642aa111bbf7de6db7e70c.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.87%</li><li style="margin: 0; padding: 0;">Disease: 4.13%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_08c428544f9edb2e7a3726cad960930a = L.circle(
+                [56.73277438888889, 24.403989805555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_72ca5a6a855d82667cad9c7f6f5853f5 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_fd8bc13d9233ca902dc90fc552d10e3e = $(`<div id="html_fd8bc13d9233ca902dc90fc552d10e3e" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0558.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0558.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_72ca5a6a855d82667cad9c7f6f5853f5.setContent(html_fd8bc13d9233ca902dc90fc552d10e3e);
+            
+        
+
+        circle_08c428544f9edb2e7a3726cad960930a.bindPopup(popup_72ca5a6a855d82667cad9c7f6f5853f5)
+        ;
+
+        
+    
+    
+            circle_08c428544f9edb2e7a3726cad960930a.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 97.18%</li><li style="margin: 0; padding: 0;">Disease: 2.82%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8afe834874d544c369d882bdda123b63 = L.circle(
+                [56.73270547222222, 24.404027305555555],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_f09a6d355a3798cb3e7242898d12e11d = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f9548703f43bbb44f5d88de33e0a6a4e = $(`<div id="html_f9548703f43bbb44f5d88de33e0a6a4e" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0568.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0568.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_f09a6d355a3798cb3e7242898d12e11d.setContent(html_f9548703f43bbb44f5d88de33e0a6a4e);
+            
+        
+
+        circle_8afe834874d544c369d882bdda123b63.bindPopup(popup_f09a6d355a3798cb3e7242898d12e11d)
+        ;
+
+        
+    
+    
+            circle_8afe834874d544c369d882bdda123b63.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.85%</li><li style="margin: 0; padding: 0;">Disease: 5.15%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_815c9f600a187a78b48c3bd8f245dc02 = L.circle(
+                [56.73264125, 24.40406161111111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_8fdc4fe64fe9d38a6dc0c9f4ebf452a6 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_231b40dd98cec0ae26f338f30fbc5df4 = $(`<div id="html_231b40dd98cec0ae26f338f30fbc5df4" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0578.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0578.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_8fdc4fe64fe9d38a6dc0c9f4ebf452a6.setContent(html_231b40dd98cec0ae26f338f30fbc5df4);
+            
+        
+
+        circle_815c9f600a187a78b48c3bd8f245dc02.bindPopup(popup_8fdc4fe64fe9d38a6dc0c9f4ebf452a6)
+        ;
+
+        
+    
+    
+            circle_815c9f600a187a78b48c3bd8f245dc02.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 100.00%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_34a418f0163635e2cdaa43f36c8dda3f = L.circle(
+                [56.73269119444445, 24.404059583333332],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_30549c57a48b51947ee948bea64713d2 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_8259bb547d5e62cdb89c81e5cfe3cf2d = $(`<div id="html_8259bb547d5e62cdb89c81e5cfe3cf2d" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0588.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0588.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_30549c57a48b51947ee948bea64713d2.setContent(html_8259bb547d5e62cdb89c81e5cfe3cf2d);
+            
+        
+
+        circle_34a418f0163635e2cdaa43f36c8dda3f.bindPopup(popup_30549c57a48b51947ee948bea64713d2)
+        ;
+
+        
+    
+    
+            circle_34a418f0163635e2cdaa43f36c8dda3f.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 93.94%</li><li style="margin: 0; padding: 0;">Disease: 6.06%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_463b114d7db098c047ff64cb7d495a62 = L.circle(
+                [56.73275988888889, 24.40402272222222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_f6aaacef1c806b342805a4bb8d07a974 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_e7e6ef0fe4329f422b54407191d7d7ae = $(`<div id="html_e7e6ef0fe4329f422b54407191d7d7ae" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0598.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0598.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_f6aaacef1c806b342805a4bb8d07a974.setContent(html_e7e6ef0fe4329f422b54407191d7d7ae);
+            
+        
+
+        circle_463b114d7db098c047ff64cb7d495a62.bindPopup(popup_f6aaacef1c806b342805a4bb8d07a974)
+        ;
+
+        
+    
+    
+            circle_463b114d7db098c047ff64cb7d495a62.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.13%</li><li style="margin: 0; padding: 0;">Disease: 7.87%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f9d172604c66f8f7039ef18fe29c6bf9 = L.circle(
+                [56.732824694444446, 24.403989777777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_1d7396a4db8e4e45173fc86c4c6b4af9 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_84ae6a0837208592beb60c266351fb35 = $(`<div id="html_84ae6a0837208592beb60c266351fb35" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0608.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0608.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_1d7396a4db8e4e45173fc86c4c6b4af9.setContent(html_84ae6a0837208592beb60c266351fb35);
+            
+        
+
+        circle_f9d172604c66f8f7039ef18fe29c6bf9.bindPopup(popup_1d7396a4db8e4e45173fc86c4c6b4af9)
+        ;
+
+        
+    
+    
+            circle_f9d172604c66f8f7039ef18fe29c6bf9.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.06%</li><li style="margin: 0; padding: 0;">Disease: 5.94%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_14d2afcb81d372cd15be12376f967ddc = L.circle(
+                [56.73289530555556, 24.403950583333334],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_0aeb2c2370fc0570c94ea17ce21f3f1e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_cd1f2265072ef3a59bfc799f9eac046b = $(`<div id="html_cd1f2265072ef3a59bfc799f9eac046b" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0618.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0618.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_0aeb2c2370fc0570c94ea17ce21f3f1e.setContent(html_cd1f2265072ef3a59bfc799f9eac046b);
+            
+        
+
+        circle_14d2afcb81d372cd15be12376f967ddc.bindPopup(popup_0aeb2c2370fc0570c94ea17ce21f3f1e)
+        ;
+
+        
+    
+    
+            circle_14d2afcb81d372cd15be12376f967ddc.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 88.89%</li><li style="margin: 0; padding: 0;">Disease: 11.11%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2d26a0e4e0aeb6fcaf120799b08129a7 = L.circle(
+                [56.732958555555555, 24.403916916666667],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_5a7bc888c8a05dc8402c8ddde62ea88e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_114ed58d96f27681e45d5805c325c317 = $(`<div id="html_114ed58d96f27681e45d5805c325c317" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0628.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0628.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_5a7bc888c8a05dc8402c8ddde62ea88e.setContent(html_114ed58d96f27681e45d5805c325c317);
+            
+        
+
+        circle_2d26a0e4e0aeb6fcaf120799b08129a7.bindPopup(popup_5a7bc888c8a05dc8402c8ddde62ea88e)
+        ;
+
+        
+    
+    
+            circle_2d26a0e4e0aeb6fcaf120799b08129a7.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.89%</li><li style="margin: 0; padding: 0;">Disease: 5.11%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b479a3b1f2247c3235c19714a8e066e2 = L.circle(
+                [56.733033194444445, 24.403876416666666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_6265e57ef9d97fd5d3cf35d41d0b1726 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_5c55aa3a241aab51f9ff1d68f908e817 = $(`<div id="html_5c55aa3a241aab51f9ff1d68f908e817" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0638.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0638.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_6265e57ef9d97fd5d3cf35d41d0b1726.setContent(html_5c55aa3a241aab51f9ff1d68f908e817);
+            
+        
+
+        circle_b479a3b1f2247c3235c19714a8e066e2.bindPopup(popup_6265e57ef9d97fd5d3cf35d41d0b1726)
+        ;
+
+        
+    
+    
+            circle_b479a3b1f2247c3235c19714a8e066e2.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.91%</li><li style="margin: 0; padding: 0;">Disease: 4.09%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_eb66951539062960b6de3cafc8f94fb0 = L.circle(
+                [56.73310447222222, 24.403839805555553],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_abce96b8f11ebc9005258c913015299b = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_ae8bec513c54fc78ff9b2e2ea2bf3aae = $(`<div id="html_ae8bec513c54fc78ff9b2e2ea2bf3aae" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0648.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0648.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_abce96b8f11ebc9005258c913015299b.setContent(html_ae8bec513c54fc78ff9b2e2ea2bf3aae);
+            
+        
+
+        circle_eb66951539062960b6de3cafc8f94fb0.bindPopup(popup_abce96b8f11ebc9005258c913015299b)
+        ;
+
+        
+    
+    
+            circle_eb66951539062960b6de3cafc8f94fb0.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 93.08%</li><li style="margin: 0; padding: 0;">Disease: 6.92%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_bb2ed0c03de73cbdb3a1b44b98cdb39d = L.circle(
+                [56.733173972222225, 24.403802777777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_0ecd2a06904ddcaf50b7cc8268694e8e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f6ce39cd0de8f99d815298d399c007cf = $(`<div id="html_f6ce39cd0de8f99d815298d399c007cf" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0658.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0658.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_0ecd2a06904ddcaf50b7cc8268694e8e.setContent(html_f6ce39cd0de8f99d815298d399c007cf);
+            
+        
+
+        circle_bb2ed0c03de73cbdb3a1b44b98cdb39d.bindPopup(popup_0ecd2a06904ddcaf50b7cc8268694e8e)
+        ;
+
+        
+    
+    
+            circle_bb2ed0c03de73cbdb3a1b44b98cdb39d.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.34%</li><li style="margin: 0; padding: 0;">Disease: 7.66%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e9ba694bb435d8b89c40d79361356b7a = L.circle(
+                [56.73324252777778, 24.403765888888888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_0799e5ee6d159b33f7327e400aace570 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f578a4fc445a73a709ce116641c6dab0 = $(`<div id="html_f578a4fc445a73a709ce116641c6dab0" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0668.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0668.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_0799e5ee6d159b33f7327e400aace570.setContent(html_f578a4fc445a73a709ce116641c6dab0);
+            
+        
+
+        circle_e9ba694bb435d8b89c40d79361356b7a.bindPopup(popup_0799e5ee6d159b33f7327e400aace570)
+        ;
+
+        
+    
+    
+            circle_e9ba694bb435d8b89c40d79361356b7a.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.65%</li><li style="margin: 0; padding: 0;">Disease: 4.35%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3862c08633374b8dd591153835931114 = L.circle(
+                [56.733311416666666, 24.403728944444442],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_d3259198534b39a7dea01595d70e681f = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f1dec4ee9b079379739ee60f85c40e0c = $(`<div id="html_f1dec4ee9b079379739ee60f85c40e0c" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0678.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0678.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_d3259198534b39a7dea01595d70e681f.setContent(html_f1dec4ee9b079379739ee60f85c40e0c);
+            
+        
+
+        circle_3862c08633374b8dd591153835931114.bindPopup(popup_d3259198534b39a7dea01595d70e681f)
+        ;
+
+        
+    
+    
+            circle_3862c08633374b8dd591153835931114.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.70%</li><li style="margin: 0; padding: 0;">Disease: 4.30%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d446e1d58b6743633637e0dc2494f0bb = L.circle(
+                [56.73326891666667, 24.403780055555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_8fc0700d1f278f2c1d69d69b11c9e22c = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f81d29b43dc440730c1765bd792b7a92 = $(`<div id="html_f81d29b43dc440730c1765bd792b7a92" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0688.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0688.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_8fc0700d1f278f2c1d69d69b11c9e22c.setContent(html_f81d29b43dc440730c1765bd792b7a92);
+            
+        
+
+        circle_d446e1d58b6743633637e0dc2494f0bb.bindPopup(popup_8fc0700d1f278f2c1d69d69b11c9e22c)
+        ;
+
+        
+    
+    
+            circle_d446e1d58b6743633637e0dc2494f0bb.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.63%</li><li style="margin: 0; padding: 0;">Disease: 4.37%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a75f6e7e1f764fed96e8b4b85a2e0cb5 = L.circle(
+                [56.73320155555556, 24.40381383333333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_372dba3442625ce38f95dc6905b7c5e4 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_0f35ed63c8058d2df0e6f916c925f11d = $(`<div id="html_0f35ed63c8058d2df0e6f916c925f11d" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0698.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0698.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_372dba3442625ce38f95dc6905b7c5e4.setContent(html_0f35ed63c8058d2df0e6f916c925f11d);
+            
+        
+
+        circle_a75f6e7e1f764fed96e8b4b85a2e0cb5.bindPopup(popup_372dba3442625ce38f95dc6905b7c5e4)
+        ;
+
+        
+    
+    
+            circle_a75f6e7e1f764fed96e8b4b85a2e0cb5.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.04%</li><li style="margin: 0; padding: 0;">Disease: 5.96%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5b1b5afebfabd2aeae9326f5e4e80693 = L.circle(
+                [56.73313188888889, 24.40385186111111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_4e97c341b78835ea0917770bd4b6e787 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_1bf0448440d1bf8dd6d43f9cccb378dd = $(`<div id="html_1bf0448440d1bf8dd6d43f9cccb378dd" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0708.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0708.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_4e97c341b78835ea0917770bd4b6e787.setContent(html_1bf0448440d1bf8dd6d43f9cccb378dd);
+            
+        
+
+        circle_5b1b5afebfabd2aeae9326f5e4e80693.bindPopup(popup_4e97c341b78835ea0917770bd4b6e787)
+        ;
+
+        
+    
+    
+            circle_5b1b5afebfabd2aeae9326f5e4e80693.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 93.04%</li><li style="margin: 0; padding: 0;">Disease: 6.96%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b230adbff4003ffe5e5b19cb7bcf077f = L.circle(
+                [56.73306263888889, 24.40388938888889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_680c01452d252790cdf282243e8f4a91 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_73d4864fc410774468e19cb19339bf07 = $(`<div id="html_73d4864fc410774468e19cb19339bf07" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0718.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0718.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_680c01452d252790cdf282243e8f4a91.setContent(html_73d4864fc410774468e19cb19339bf07);
+            
+        
+
+        circle_b230adbff4003ffe5e5b19cb7bcf077f.bindPopup(popup_680c01452d252790cdf282243e8f4a91)
+        ;
+
+        
+    
+    
+            circle_b230adbff4003ffe5e5b19cb7bcf077f.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.97%</li><li style="margin: 0; padding: 0;">Disease: 5.03%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_82574ad6b22962f394a2101cb6e2012f = L.circle(
+                [56.73298855555556, 24.403927638888888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_260b53407ee20228ffcf6ae005a99632 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_b434abb49b36e8089c48e9bbae7a8556 = $(`<div id="html_b434abb49b36e8089c48e9bbae7a8556" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0728.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0728.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_260b53407ee20228ffcf6ae005a99632.setContent(html_b434abb49b36e8089c48e9bbae7a8556);
+            
+        
+
+        circle_82574ad6b22962f394a2101cb6e2012f.bindPopup(popup_260b53407ee20228ffcf6ae005a99632)
+        ;
+
+        
+    
+    
+            circle_82574ad6b22962f394a2101cb6e2012f.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.98%</li><li style="margin: 0; padding: 0;">Disease: 7.02%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2cc42400d9cc921f096f318ed40a6048 = L.circle(
+                [56.732923944444444, 24.403963777777776],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_5e18d0188013153617b06f2ffd751515 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_1ce57adb3f54ecfa3069cdd9902f9453 = $(`<div id="html_1ce57adb3f54ecfa3069cdd9902f9453" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0738.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0738.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_5e18d0188013153617b06f2ffd751515.setContent(html_1ce57adb3f54ecfa3069cdd9902f9453);
+            
+        
+
+        circle_2cc42400d9cc921f096f318ed40a6048.bindPopup(popup_5e18d0188013153617b06f2ffd751515)
+        ;
+
+        
+    
+    
+            circle_2cc42400d9cc921f096f318ed40a6048.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 98.06%</li><li style="margin: 0; padding: 0;">Mineral: 0.39%</li><li style="margin: 0; padding: 0;">Disease: 1.55%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4393a147ab9f9a336aed981dfb36ba96 = L.circle(
+                [56.732850444444445, 24.404000777777778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_4dc20126e61c1cd175795b03ae9ac169 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_ea921711d44da58e02405b57d3092453 = $(`<div id="html_ea921711d44da58e02405b57d3092453" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0748.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0748.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_4dc20126e61c1cd175795b03ae9ac169.setContent(html_ea921711d44da58e02405b57d3092453);
+            
+        
+
+        circle_4393a147ab9f9a336aed981dfb36ba96.bindPopup(popup_4dc20126e61c1cd175795b03ae9ac169)
+        ;
+
+        
+    
+    
+            circle_4393a147ab9f9a336aed981dfb36ba96.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 91.11%</li><li style="margin: 0; padding: 0;">Disease: 8.89%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_4b1a3e96a3d47abe96bff907ca155141 = L.circle(
+                [56.73277822222222, 24.404040888888886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_0d044312d00b0802443225500d58848a = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_9629179e1f4a45b7fa7cfaace2b4a7b3 = $(`<div id="html_9629179e1f4a45b7fa7cfaace2b4a7b3" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0758.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0758.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_0d044312d00b0802443225500d58848a.setContent(html_9629179e1f4a45b7fa7cfaace2b4a7b3);
+            
+        
+
+        circle_4b1a3e96a3d47abe96bff907ca155141.bindPopup(popup_0d044312d00b0802443225500d58848a)
+        ;
+
+        
+    
+    
+            circle_4b1a3e96a3d47abe96bff907ca155141.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 98.20%</li><li style="margin: 0; padding: 0;">Disease: 1.80%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ee7912718a4c3d24eaa168d74eb11c4a = L.circle(
+                [56.73270827777778, 24.40407886111111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_97050fee234af85d0b12b86d9fa4becd = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_599b46c71a7fae2f03827e4ed93c0155 = $(`<div id="html_599b46c71a7fae2f03827e4ed93c0155" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0768.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0768.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_97050fee234af85d0b12b86d9fa4becd.setContent(html_599b46c71a7fae2f03827e4ed93c0155);
+            
+        
+
+        circle_ee7912718a4c3d24eaa168d74eb11c4a.bindPopup(popup_97050fee234af85d0b12b86d9fa4becd)
+        ;
+
+        
+    
+    
+            circle_ee7912718a4c3d24eaa168d74eb11c4a.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.42%</li><li style="margin: 0; padding: 0;">Mineral: 0.47%</li><li style="margin: 0; padding: 0;">Disease: 7.11%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f4b4f8d877f35d24040c09cfc2a25cdf = L.circle(
+                [56.732648222222224, 24.40413994444444],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_5dbe3e81cd6475677fb369eea65429b1 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_7d777699b9510de452b7217abc6b6e79 = $(`<div id="html_7d777699b9510de452b7217abc6b6e79" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0778.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0778.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_5dbe3e81cd6475677fb369eea65429b1.setContent(html_7d777699b9510de452b7217abc6b6e79);
+            
+        
+
+        circle_f4b4f8d877f35d24040c09cfc2a25cdf.bindPopup(popup_5dbe3e81cd6475677fb369eea65429b1)
+        ;
+
+        
+    
+    
+            circle_f4b4f8d877f35d24040c09cfc2a25cdf.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.44%</li><li style="margin: 0; padding: 0;">Disease: 5.56%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_be04f099a3cb5319dbd119c2976aae43 = L.circle(
+                [56.732718500000004, 24.404098305555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_a626322bce6ac51f4c27a7f893704332 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_9ad2834c57772b4e634f717e2e7407bb = $(`<div id="html_9ad2834c57772b4e634f717e2e7407bb" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0788.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0788.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_a626322bce6ac51f4c27a7f893704332.setContent(html_9ad2834c57772b4e634f717e2e7407bb);
+            
+        
+
+        circle_be04f099a3cb5319dbd119c2976aae43.bindPopup(popup_a626322bce6ac51f4c27a7f893704332)
+        ;
+
+        
+    
+    
+            circle_be04f099a3cb5319dbd119c2976aae43.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 87.79%</li><li style="margin: 0; padding: 0;">Disease: 12.21%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f8ed9d756f3172a654e3d7790d96f884 = L.circle(
+                [56.73278852777778, 24.40406008333333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_1e9a2db0ebbf71c6119da270e50d87e3 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_2744d9c40008f6f1653117588f038c12 = $(`<div id="html_2744d9c40008f6f1653117588f038c12" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0798.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0798.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_1e9a2db0ebbf71c6119da270e50d87e3.setContent(html_2744d9c40008f6f1653117588f038c12);
+            
+        
+
+        circle_f8ed9d756f3172a654e3d7790d96f884.bindPopup(popup_1e9a2db0ebbf71c6119da270e50d87e3)
+        ;
+
+        
+    
+    
+            circle_f8ed9d756f3172a654e3d7790d96f884.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.74%</li><li style="margin: 0; padding: 0;">Disease: 5.26%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f053bf8c98274446435d4171b827172a = L.circle(
+                [56.732857805555554, 24.4040245],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_d32a37e900d5b388678ba93a6bdf5afe = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_b33bbb130585cfcd28ef73fdaa0254e7 = $(`<div id="html_b33bbb130585cfcd28ef73fdaa0254e7" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0808.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0808.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_d32a37e900d5b388678ba93a6bdf5afe.setContent(html_b33bbb130585cfcd28ef73fdaa0254e7);
+            
+        
+
+        circle_f053bf8c98274446435d4171b827172a.bindPopup(popup_d32a37e900d5b388678ba93a6bdf5afe)
+        ;
+
+        
+    
+    
+            circle_f053bf8c98274446435d4171b827172a.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.02%</li><li style="margin: 0; padding: 0;">Disease: 5.98%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b9d9ff35a3b0b9a701ad35aef516715c = L.circle(
+                [56.73293272222222, 24.40398286111111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_e02a8b8e973281ba42e5abaa6050fd4b = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f0ec7b32ebd81837bce5dedfbe3e35c5 = $(`<div id="html_f0ec7b32ebd81837bce5dedfbe3e35c5" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0818.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0818.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_e02a8b8e973281ba42e5abaa6050fd4b.setContent(html_f0ec7b32ebd81837bce5dedfbe3e35c5);
+            
+        
+
+        circle_b9d9ff35a3b0b9a701ad35aef516715c.bindPopup(popup_e02a8b8e973281ba42e5abaa6050fd4b)
+        ;
+
+        
+    
+    
+            circle_b9d9ff35a3b0b9a701ad35aef516715c.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.76%</li><li style="margin: 0; padding: 0;">Disease: 4.24%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_69ea0c5889ea49b8ce3d1280d6f75e98 = L.circle(
+                [56.733001305555554, 24.403947777777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_f4b1c00998329625a431bc708426b373 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_c388579f9f4e48e8f4e5db7afcf561fa = $(`<div id="html_c388579f9f4e48e8f4e5db7afcf561fa" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0828.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0828.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_f4b1c00998329625a431bc708426b373.setContent(html_c388579f9f4e48e8f4e5db7afcf561fa);
+            
+        
+
+        circle_69ea0c5889ea49b8ce3d1280d6f75e98.bindPopup(popup_f4b1c00998329625a431bc708426b373)
+        ;
+
+        
+    
+    
+            circle_69ea0c5889ea49b8ce3d1280d6f75e98.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 93.07%</li><li style="margin: 0; padding: 0;">Disease: 6.93%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_774fb41b46469d34003c80e5f77e5425 = L.circle(
+                [56.73307061111111, 24.403909777777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_8cf8c6d3e97835218276a543b6c7fe6e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_efae87084c3cfe6895314aa333053441 = $(`<div id="html_efae87084c3cfe6895314aa333053441" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0838.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0838.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_8cf8c6d3e97835218276a543b6c7fe6e.setContent(html_efae87084c3cfe6895314aa333053441);
+            
+        
+
+        circle_774fb41b46469d34003c80e5f77e5425.bindPopup(popup_8cf8c6d3e97835218276a543b6c7fe6e)
+        ;
+
+        
+    
+    
+            circle_774fb41b46469d34003c80e5f77e5425.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.47%</li><li style="margin: 0; padding: 0;">Disease: 5.53%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1adc10ff1e3cb4fba84e26f1d4d60484 = L.circle(
+                [56.733141583333335, 24.40387225],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_c06469e30dfd239cef13babca5448f5b = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_9d0c3d4154d5ed724d3e0d70392d0b26 = $(`<div id="html_9d0c3d4154d5ed724d3e0d70392d0b26" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0848.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0848.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_c06469e30dfd239cef13babca5448f5b.setContent(html_9d0c3d4154d5ed724d3e0d70392d0b26);
+            
+        
+
+        circle_1adc10ff1e3cb4fba84e26f1d4d60484.bindPopup(popup_c06469e30dfd239cef13babca5448f5b)
+        ;
+
+        
+    
+    
+            circle_1adc10ff1e3cb4fba84e26f1d4d60484.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 96.25%</li><li style="margin: 0; padding: 0;">Disease: 3.75%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2b2826f94661b1cafda4a50c0db59299 = L.circle(
+                [56.73321275, 24.403834277777776],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_2dfeeb1894bd80b32e840cd9f51762ae = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_333332373ea2d2273c65f064eb61e572 = $(`<div id="html_333332373ea2d2273c65f064eb61e572" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0858.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0858.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_2dfeeb1894bd80b32e840cd9f51762ae.setContent(html_333332373ea2d2273c65f064eb61e572);
+            
+        
+
+        circle_2b2826f94661b1cafda4a50c0db59299.bindPopup(popup_2dfeeb1894bd80b32e840cd9f51762ae)
+        ;
+
+        
+    
+    
+            circle_2b2826f94661b1cafda4a50c0db59299.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 89.83%</li><li style="margin: 0; padding: 0;">Disease: 10.17%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c5707e537ffe28213ddec16a0071d552 = L.circle(
+                [56.73325997222222, 24.403809555555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_25441ea42dbee8f53e081009f0df4677 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_c23d78f29f9d77a200ddd5aa26aaca76 = $(`<div id="html_c23d78f29f9d77a200ddd5aa26aaca76" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0868.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0868.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_25441ea42dbee8f53e081009f0df4677.setContent(html_c23d78f29f9d77a200ddd5aa26aaca76);
+            
+        
+
+        circle_c5707e537ffe28213ddec16a0071d552.bindPopup(popup_25441ea42dbee8f53e081009f0df4677)
+        ;
+
+        
+    
+    
+            circle_c5707e537ffe28213ddec16a0071d552.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 96.04%</li><li style="margin: 0; padding: 0;">Disease: 3.96%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_dd8b7ecef07b68dda3f6c6dd498b2f00 = L.circle(
+                [56.733331, 24.403802805555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_fc39b899a02d03b278489704befd0893 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_00fecff102b2456aa146c37cb0108f25 = $(`<div id="html_00fecff102b2456aa146c37cb0108f25" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0878.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0878.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_fc39b899a02d03b278489704befd0893.setContent(html_00fecff102b2456aa146c37cb0108f25);
+            
+        
+
+        circle_dd8b7ecef07b68dda3f6c6dd498b2f00.bindPopup(popup_fc39b899a02d03b278489704befd0893)
+        ;
+
+        
+    
+    
+            circle_dd8b7ecef07b68dda3f6c6dd498b2f00.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.29%</li><li style="margin: 0; padding: 0;">Mineral: 0.41%</li><li style="margin: 0; padding: 0;">Disease: 5.31%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_867b153894d980454647b016d58c42c1 = L.circle(
+                [56.733258944444444, 24.403835555555553],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_3f3dd2cac93dc3015a313eb27adb577e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_763b3b63d9d725a767616673701bf0b8 = $(`<div id="html_763b3b63d9d725a767616673701bf0b8" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0888.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0888.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_3f3dd2cac93dc3015a313eb27adb577e.setContent(html_763b3b63d9d725a767616673701bf0b8);
+            
+        
+
+        circle_867b153894d980454647b016d58c42c1.bindPopup(popup_3f3dd2cac93dc3015a313eb27adb577e)
+        ;
+
+        
+    
+    
+            circle_867b153894d980454647b016d58c42c1.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.19%</li><li style="margin: 0; padding: 0;">Disease: 4.81%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2553424f4a95269e77ce0abf585e14a4 = L.circle(
+                [56.73318972222222, 24.40387225],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_c6dd1d93f28a77b6fd46a4b436ae3364 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_27dce4fa6de7a88e1670c0ea7a140bb4 = $(`<div id="html_27dce4fa6de7a88e1670c0ea7a140bb4" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0898.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0898.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_c6dd1d93f28a77b6fd46a4b436ae3364.setContent(html_27dce4fa6de7a88e1670c0ea7a140bb4);
+            
+        
+
+        circle_2553424f4a95269e77ce0abf585e14a4.bindPopup(popup_c6dd1d93f28a77b6fd46a4b436ae3364)
+        ;
+
+        
+    
+    
+            circle_2553424f4a95269e77ce0abf585e14a4.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.95%</li><li style="margin: 0; padding: 0;">Disease: 7.05%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_76cd0748124fc1cf77688f591fa7cfab = L.circle(
+                [56.73311811111111, 24.403911833333332],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_17bdbb38ce29a325a2a6e2505e46c45a = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_adaa534f9582365e92565caefa43b6ca = $(`<div id="html_adaa534f9582365e92565caefa43b6ca" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0908.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0908.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_17bdbb38ce29a325a2a6e2505e46c45a.setContent(html_adaa534f9582365e92565caefa43b6ca);
+            
+        
+
+        circle_76cd0748124fc1cf77688f591fa7cfab.bindPopup(popup_17bdbb38ce29a325a2a6e2505e46c45a)
+        ;
+
+        
+    
+    
+            circle_76cd0748124fc1cf77688f591fa7cfab.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 87.12%</li><li style="margin: 0; padding: 0;">Disease: 12.88%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2ff54d38f98635b4a7a4b9cf15b4883f = L.circle(
+                [56.73304569444445, 24.40395072222222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_641e99d2ce044d5f91cab9aa2f1a3d9e = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_52642244d05e983ea6d6ad55c016ca54 = $(`<div id="html_52642244d05e983ea6d6ad55c016ca54" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0918.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0918.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_641e99d2ce044d5f91cab9aa2f1a3d9e.setContent(html_52642244d05e983ea6d6ad55c016ca54);
+            
+        
+
+        circle_2ff54d38f98635b4a7a4b9cf15b4883f.bindPopup(popup_641e99d2ce044d5f91cab9aa2f1a3d9e)
+        ;
+
+        
+    
+    
+            circle_2ff54d38f98635b4a7a4b9cf15b4883f.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 94.87%</li><li style="margin: 0; padding: 0;">Disease: 5.13%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b076605f845d45a01baa00e8d0064d0d = L.circle(
+                [56.7329735, 24.403989],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_542e9f3ffd9b31a732732eb408fc35bb = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_b41a8400b141b4646d8b7c84a5e866f0 = $(`<div id="html_b41a8400b141b4646d8b7c84a5e866f0" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0928.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0928.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_542e9f3ffd9b31a732732eb408fc35bb.setContent(html_b41a8400b141b4646d8b7c84a5e866f0);
+            
+        
+
+        circle_b076605f845d45a01baa00e8d0064d0d.bindPopup(popup_542e9f3ffd9b31a732732eb408fc35bb)
+        ;
+
+        
+    
+    
+            circle_b076605f845d45a01baa00e8d0064d0d.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.64%</li><li style="margin: 0; padding: 0;">Disease: 4.36%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6a3ce13990e914dc15e508b277b6942d = L.circle(
+                [56.732904250000004, 24.40402575],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_dc05fb129e8d3c4b50d689ffdf138a8c = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_0c746988c50418807f43b910600fa9b6 = $(`<div id="html_0c746988c50418807f43b910600fa9b6" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0938.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0938.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_dc05fb129e8d3c4b50d689ffdf138a8c.setContent(html_0c746988c50418807f43b910600fa9b6);
+            
+        
+
+        circle_6a3ce13990e914dc15e508b277b6942d.bindPopup(popup_dc05fb129e8d3c4b50d689ffdf138a8c)
+        ;
+
+        
+    
+    
+            circle_6a3ce13990e914dc15e508b277b6942d.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.48%</li><li style="margin: 0; padding: 0;">Disease: 4.52%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_775c6890c21036b96e38fd5cbbba7a46 = L.circle(
+                [56.73283516666667, 24.404062194444442],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_32388ec85389f0b3687128106c261b15 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_f16ec4df480f982c07a558f3c0189632 = $(`<div id="html_f16ec4df480f982c07a558f3c0189632" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0948.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0948.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_32388ec85389f0b3687128106c261b15.setContent(html_f16ec4df480f982c07a558f3c0189632);
+            
+        
+
+        circle_775c6890c21036b96e38fd5cbbba7a46.bindPopup(popup_32388ec85389f0b3687128106c261b15)
+        ;
+
+        
+    
+    
+            circle_775c6890c21036b96e38fd5cbbba7a46.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 96.26%</li><li style="margin: 0; padding: 0;">Disease: 3.74%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_58750e212e53b546d10ac23ad27c6036 = L.circle(
+                [56.73276491666667, 24.404101277777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_970a18ba104a2e4d8420022fd8d1e642 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_4b0c2dbaf30fec51bf2cdcce7ff99b66 = $(`<div id="html_4b0c2dbaf30fec51bf2cdcce7ff99b66" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0958.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0958.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_970a18ba104a2e4d8420022fd8d1e642.setContent(html_4b0c2dbaf30fec51bf2cdcce7ff99b66);
+            
+        
+
+        circle_58750e212e53b546d10ac23ad27c6036.bindPopup(popup_970a18ba104a2e4d8420022fd8d1e642)
+        ;
+
+        
+    
+    
+            circle_58750e212e53b546d10ac23ad27c6036.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 97.97%</li><li style="margin: 0; padding: 0;">Disease: 2.03%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_715d90bb3a1cd50b8971d67f69be873f = L.circle(
+                [56.732695972222224, 24.404137055555555],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_0ceca1cc012fb583d8bc998c92d5edfe = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_9242b5bc342d7815eee6214b4bfe0c76 = $(`<div id="html_9242b5bc342d7815eee6214b4bfe0c76" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0968.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0968.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_0ceca1cc012fb583d8bc998c92d5edfe.setContent(html_9242b5bc342d7815eee6214b4bfe0c76);
+            
+        
+
+        circle_715d90bb3a1cd50b8971d67f69be873f.bindPopup(popup_0ceca1cc012fb583d8bc998c92d5edfe)
+        ;
+
+        
+    
+    
+            circle_715d90bb3a1cd50b8971d67f69be873f.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 95.31%</li><li style="margin: 0; padding: 0;">Disease: 4.69%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a32e95b9147db51e4a88d0a86475d04a = L.circle(
+                [56.73264502777778, 24.40402897222222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_c653f665578b0e21756f3449f0baac44 = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_e9d4f30bc8666328905d7ce4e94f7138 = $(`<div id="html_e9d4f30bc8666328905d7ce4e94f7138" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0978.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0978.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_c653f665578b0e21756f3449f0baac44.setContent(html_e9d4f30bc8666328905d7ce4e94f7138);
+            
+        
+
+        circle_a32e95b9147db51e4a88d0a86475d04a.bindPopup(popup_c653f665578b0e21756f3449f0baac44)
+        ;
+
+        
+    
+    
+            circle_a32e95b9147db51e4a88d0a86475d04a.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 92.59%</li><li style="margin: 0; padding: 0;">Disease: 7.41%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_24dc86e44d0ab5333b4f41058fcbd330 = L.circle(
+                [56.73271469444445, 24.403994805555556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_68b68c2de714f28bff5f0e89e8a80cae = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_352f8ba8ee076e664c719984c8bd7ebe = $(`<div id="html_352f8ba8ee076e664c719984c8bd7ebe" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0988.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0988.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_68b68c2de714f28bff5f0e89e8a80cae.setContent(html_352f8ba8ee076e664c719984c8bd7ebe);
+            
+        
+
+        circle_24dc86e44d0ab5333b4f41058fcbd330.bindPopup(popup_68b68c2de714f28bff5f0e89e8a80cae)
+        ;
+
+        
+    
+    
+            circle_24dc86e44d0ab5333b4f41058fcbd330.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 93.52%</li><li style="margin: 0; padding: 0;">Disease: 6.48%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e936e24e17dc60fb03db2574b2652454 = L.circle(
+                [56.732784361111115, 24.403957166666665],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.05, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1bbfd5f2460ee93996b0b829849f9329);
+        
+    
+        var popup_464cb09c73441cd43f8bb4d9eea5bf2b = L.popup({"maxWidth": "100%", "width": 300});
+
+        
+            
+                var html_3e547a030961abc46b63dd9c98faa944 = $(`<div id="html_3e547a030961abc46b63dd9c98faa944" style="width: 100.0%; height: 100.0%;">                             <div style="text-align:center;">                                 <a href="images/2024-09-01/DJI_0998.JPG" target="_blank">                                 <img src="images/2024-09-01/DJI_0998.JPG" style="max-width:300px; height:auto;" />                                 <a>                             </div>                         </div>`)[0];
+                popup_464cb09c73441cd43f8bb4d9eea5bf2b.setContent(html_3e547a030961abc46b63dd9c98faa944);
+            
+        
+
+        circle_e936e24e17dc60fb03db2574b2652454.bindPopup(popup_464cb09c73441cd43f8bb4d9eea5bf2b)
+        ;
+
+        
+    
+    
+            circle_e936e24e17dc60fb03db2574b2652454.bindTooltip(
+                `<div>
+                     
+            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                <li style="margin: 0; padding: 0;">Healthy: 90.15%</li><li style="margin: 0; padding: 0;">Disease: 9.85%</li>
+            </ul>
+        
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_1bbfd5f2460ee93996b0b829849f9329.addTo(map_4288293cb21b5636da2b93415b8dfa86);
+        
+    
+            var layer_control_27b94ba20a6b9ee97736d478a9344a5d_layers = {
+                base_layers : {
+                    "Esri World Imagery" : tile_layer_3692148cc17aa3a7c6000c53bdca7d82,
+                },
+                overlays :  {
+                    "Healthy Leaves" : feature_group_00f76ad074fa284704bcdf2a62520896,
+                    "Diseased Leaves" : feature_group_e1d5e1e17f70afb0b264630be78505b1,
+                    "Mineral Deficiency" : feature_group_cda2c6ce42966d3540835206b08a5346,
+                    "Images" : feature_group_1bbfd5f2460ee93996b0b829849f9329,
+                },
+            };
+            let layer_control_27b94ba20a6b9ee97736d478a9344a5d = L.control.layers(
+                layer_control_27b94ba20a6b9ee97736d478a9344a5d_layers.base_layers,
+                layer_control_27b94ba20a6b9ee97736d478a9344a5d_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_4288293cb21b5636da2b93415b8dfa86);
+
+        
+</script>
+</html>

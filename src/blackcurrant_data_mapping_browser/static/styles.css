@@ -1,0 +1,108 @@
+body {
+        padding: 0;
+        display: flex;
+        overflow: hidden;
+        height: auto;
+        }
+
+        .sidebar-container {
+            display: flex;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background-color: #f0f2f6;
+            height: 100dvh;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: width 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar.shrink {
+            width: 5px;
+        }
+
+        .sidebar h2,
+        .sidebar .radio-group,
+        .sidebar select {
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar.shrink h2,
+        .sidebar.shrink .radio-group,
+        .sidebar.shrink select {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #toggleSidebar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f0f2f6;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            transform: rotate(0deg);
+
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.shrink #toggleSidebar {
+            transform: rotate(180deg);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            height: calc(100vh - 55px);
+            overflow-y: auto;
+        }
+
+        .map-title {
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .map-container {
+            margin-bottom: 20px;
+            height: 800px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        select, .radio-group {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 5px;
+            height:auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #compareDatesSelect {
+            height: 150px;
+        }
